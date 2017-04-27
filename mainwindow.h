@@ -21,6 +21,7 @@ public:
 private slots:
     void on_sendButton_clicked();
     void on_setFlagsButton_clicked();
+    void on_spinBox_valueChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;

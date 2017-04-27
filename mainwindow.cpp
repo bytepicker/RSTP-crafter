@@ -6,6 +6,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    /* get devices num and descriptions */
+    CAP c;
+    auto n = c.getInterfaceCount();
+    auto d = c.getDescription(ui->spinBox->value());
+
+    ui->spinBox->setMaximum(n);
+    ui->ifDescription->setText(d);
+    c.getLocalMac(ui->spinBox->value());
+
+    QString name_template("lineEdit_%1");
+    for(int i=6, j=0; i<12; i++, j++){
+        QLineEdit *edit = ui->parentWidget->findChild<QLineEdit *>(name_template.arg(i));
+        edit->setText(c.returnMac(j));
+    }
 }
 
 MainWindow::~MainWindow()
@@ -82,4 +96,18 @@ void MainWindow::on_setFlagsButton_clicked()
 
     bytes = bitsToBytes(bits);
     ui->lineEdit_21->setText(QString(bytes.toHex()));
+}
+
+void MainWindow::on_spinBox_valueChanged(int arg1)
+{
+    CAP c;
+    auto d = c.getDescription(arg1);
+    ui->ifDescription->setText(d);
+    c.getLocalMac(ui->spinBox->value());
+
+    QString name_template("lineEdit_%1");
+    for(int i=6, j=0; i<12; i++, j++){
+        QLineEdit *edit = ui->parentWidget->findChild<QLineEdit *>(name_template.arg(i));
+        edit->setText(c.returnMac(j));
+    }
 }

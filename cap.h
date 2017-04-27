@@ -15,12 +15,17 @@ class CAP : public QMainWindow
 
 public:
     CAP();
-    bool sendPacket(const char *);
+    int getInterfaceCount();
+    QString getDescription(const int);
+    bool getLocalMac(const int);
+    QString returnMac(const int);
     bool openInterface(const int);
+    bool sendPacket(const char *);
 private:
     pcap_if_t *alldevs, *d;
     pcap_t *fp;
     char errbuf[PCAP_ERRBUF_SIZE];
+    char pMac[20];
 };
 
 #endif // CAP_H

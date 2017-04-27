@@ -37,5 +37,9 @@ win32: LIBS += -L$$PWD/../../../../../WpdPack/Lib/ -lwpcap
 INCLUDEPATH += $$PWD/../../../../../WpdPack/Include
 DEPENDPATH += $$PWD/../../../../../WpdPack/Lib
 
-win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../../../WpdPack/Lib/wpcap.lib
-else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../../../WpdPack/Lib/libwpcap.a
+
+win32:LIBS += -L$$PWD/../../../../../WpdPack/Lib/ -lPacket
+
+INCLUDEPATH += $$PWD/../../../../../WpdPack/Lib
+DEPENDPATH += $$PWD/../../../../../WpdPack/Lib
+
