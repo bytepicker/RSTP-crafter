@@ -32,6 +32,8 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
+win32:RC_ICONS += Beer-icon.ico
+
 win32: LIBS += -L$$PWD/../../../../../WpdPack/Lib/ -lwpcap
 
 INCLUDEPATH += $$PWD/../../../../../WpdPack/Include

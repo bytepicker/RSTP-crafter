@@ -25,67 +25,11 @@
   <property name="windowTitle">
    <string>RSTP Crafter</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>../../../Desktop/Beer-icon.png</normaloff>../../../Desktop/Beer-icon.png</iconset>
-  </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>41</x>
-      <y>210</y>
-      <width>39</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TCN ack</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>86</x>
-      <y>210</y>
-      <width>29</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Agree</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>126</x>
-      <y>210</y>
-      <width>28</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Frwrd</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>167</x>
-      <y>210</y>
-      <width>27</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Learn</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>210</x>
       <y>210</y>
       <width>71</width>
       <height>16</height>
@@ -98,34 +42,11 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;00 - Unknown&lt;/p&gt;&lt;p&gt;01 - Alternate/Backup&lt;/p&gt;&lt;p&gt;10 - Root&lt;/p&gt;&lt;p&gt;11 - Designated&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
     <property name="text">
      <string>Port Roles</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>210</y>
-      <width>22</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Prop</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>210</y>
-      <width>20</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TCN</string>
     </property>
    </widget>
    <widget class="QWidget" name="parentWidget" native="true">
@@ -285,7 +206,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_19">
+        <widget class="QLineEdit" name="lineEdit_18">
          <property name="enabled">
           <bool>false</bool>
          </property>
@@ -348,12 +269,12 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_20">
+        <widget class="QLineEdit" name="lineEdit_19">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Protocol version ID&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
-          <string>02</string>
+          <string>00</string>
          </property>
         </widget>
        </item>
@@ -408,7 +329,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_18">
+        <widget class="QLineEdit" name="lineEdit_20">
          <property name="enabled">
           <bool>true</bool>
          </property>
@@ -1180,6 +1101,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>Topology change ACK</string>
+     </property>
      <property name="maximum">
       <number>1</number>
      </property>
@@ -1192,6 +1116,9 @@
        <width>31</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Agreement</string>
      </property>
      <property name="maximum">
       <number>1</number>
@@ -1206,6 +1133,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>Forwarding</string>
+     </property>
      <property name="maximum">
       <number>1</number>
      </property>
@@ -1218,6 +1148,9 @@
        <width>31</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Learning</string>
      </property>
      <property name="maximum">
       <number>1</number>
@@ -1245,6 +1178,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>Proposal</string>
+     </property>
      <property name="maximum">
       <number>1</number>
      </property>
@@ -1257,6 +1193,9 @@
        <width>31</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Topology change</string>
      </property>
      <property name="maximum">
       <number>1</number>
@@ -1332,13 +1271,7 @@
    </widget>
    <zorder>layoutWidget</zorder>
    <zorder>layoutWidget</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
-   <zorder>label_6</zorder>
    <zorder>label_7</zorder>
-   <zorder>label_8</zorder>
-   <zorder>label_9</zorder>
    <zorder>parentWidget</zorder>
    <zorder>flagWidget</zorder>
   </widget>
@@ -1366,15 +1299,15 @@
   <tabstop>sendButton</tabstop>
   <tabstop>setFlagsButton</tabstop>
   <tabstop>lineEdit_3</tabstop>
-  <tabstop>lineEdit_19</tabstop>
+  <tabstop>lineEdit_18</tabstop>
   <tabstop>lineEdit_1</tabstop>
   <tabstop>lineEdit_48</tabstop>
   <tabstop>lineEdit_4</tabstop>
-  <tabstop>lineEdit_20</tabstop>
+  <tabstop>lineEdit_19</tabstop>
   <tabstop>lineEdit_36</tabstop>
   <tabstop>lineEdit_52</tabstop>
   <tabstop>lineEdit_2</tabstop>
-  <tabstop>lineEdit_18</tabstop>
+  <tabstop>lineEdit_20</tabstop>
   <tabstop>lineEdit_34</tabstop>
   <tabstop>lineEdit_50</tabstop>
   <tabstop>lineEdit_5</tabstop>
